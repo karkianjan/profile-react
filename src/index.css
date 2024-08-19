@@ -1,24 +1,137 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media only screen and (max-width: 1200px) {
+  .cv {
+    margin: 3rem;
+  }
+
+  .cv .top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cv .top .profiletext {
+    padding: 40px;
+    text-align: center;
+  }
+
+  .cv .top .imgbox .box {
+    width: 40%;
+    min-width: 150px;
+  }
+
+  .cv .contentbox {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .cv .contentbox .leftside,
+  .cv .contentbox .rightside {
+    padding: 20px;
+  }
+
+  .cv .contentbox ul.interest {
+    grid-template-columns: 1fr;
+  }
 }
 
+@media only screen and (max-width: 768px) {
+  .cv {
+    margin: 1rem;
+  }
+
+  .cv .top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cv .top .profiletext {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .cv .top .imgbox .box {
+    width: 50%;
+    min-width: 120px;
+  }
+
+  .cv .contentbox {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .cv .contentbox .leftside,
+  .cv .contentbox .rightside {
+    padding: 10px;
+  }
+
+  .cv .contentbox ul.interest {
+    grid-template-columns: 1fr;
+  }
+
+  .cv .contentbox ul li {
+    font-size: 0.9em;
+  }
+
+  .cv .skills .box {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .cv {
+    margin: 0.5rem;
+  }
+
+  .cv .top .profiletext h3 {
+    font-size: 2em;
+  }
+
+  .cv .top .imgbox .box {
+    width: 60%;
+    min-width: 100px;
+  }
+
+  .cv .contentbox {
+    padding: 5px;
+  }
+
+  .cv .contentbox .leftside,
+  .cv .contentbox .rightside {
+    padding: 5px;
+  }
+
+  .cv .skills .box {
+    grid-template-columns: 1fr;
+    padding: 5px;
+  }
+
+  .cv .contentbox ul.interest {
+    grid-template-columns: 1fr;
+  }
+
+  .cv .contentbox ul li {
+    font-size: 0.8em;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial;
-
 }
 
 body {
@@ -27,9 +140,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-
 }
-
 
 .cv {
   position: relative;
@@ -42,14 +153,12 @@ body {
   border-right: 50px solid #fff;
 }
 
-
 .cv .top {
   position: relative;
   display: grid;
   grid-template-columns: 1fr, 2fr;
   padding: 40px;
   padding-bottom: 0px;
-
 }
 
 .cv .top {
@@ -57,10 +166,11 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-
 }
 
-
+.leftside ul a {
+  text-decoration: none;
+}
 .cv .top .imgbox .box {
   position: relative;
   width: 30%;
@@ -68,7 +178,6 @@ body {
   border-radius: 50%;
   overflow: hidden;
   aspect-ratio: 1;
-
 }
 
 .cv .top .imgbox .box img {
@@ -78,7 +187,6 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
 }
 
 .cv .top .profiletext {
@@ -86,7 +194,6 @@ body {
   padding: 140px;
   display: flex;
   align-items: center;
-
 }
 
 .cv .top .profiletext h3 {
@@ -103,8 +210,6 @@ body {
   font-weight: 300;
   top: -10px;
   font-family: cursive;
-
-
 }
 
 .cv .contentbox {
@@ -150,34 +255,28 @@ body {
 .cv .contentbox ul.education li {
   flex-direction: column;
   margin: 25px 0;
-
-
 }
 
 h5 {
   color: blue;
-
 }
 
 h4 {
   color: #333;
   font-weight: 500;
   margin: 5px 0;
-
 }
 
 h6 {
   color: #666;
   font-weight: 300;
   font-size: 1em;
-
 }
 
 .language li span {
   color: #333;
   font-size: 16px;
   font-weight: 500;
-
 }
 
 .language .percent {
@@ -199,12 +298,10 @@ h6 {
   background: blue;
 }
 
-
 .cv .contentbox ul.interest {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-
 }
 
 .cv .contentbox ul .interest li {
@@ -224,7 +321,6 @@ h6 {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .cv .contentbox ul.interest li .icon ion-icon {
@@ -240,7 +336,6 @@ p {
   padding: 40px;
 }
 
-
 .cv .rightside .skills .box {
   position: relative;
   width: 100%;
@@ -248,7 +343,6 @@ p {
   grid-template-columns: 150px 1fr;
   justify-content: center;
   align-items: center;
-
 }
 
 .cv .rightside .skills .box .percent {
@@ -256,7 +350,6 @@ p {
   width: 100%;
   height: 2vh;
   background: #e3e3e3;
-
 }
 
 .cv .skills .box .percent div {
@@ -265,7 +358,6 @@ p {
   left: 0;
   height: 100%;
   background: blue;
-
 }
 
 .cv .skills .box h4 {
